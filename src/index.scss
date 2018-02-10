@@ -1,0 +1,52 @@
+$spinkit-spinner-color: transparentize(grey, 0.5);
+
+@import '../node_modules/normalize.css/normalize.css';
+@import '../node_modules/semantic-ui-css/semantic.css';
+@import '../node_modules/spinkit/scss/spinners/7-three-bounce';
+
+$body-width: 100%;
+
+body {
+    width: $body-width;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.choice.card.ui {
+    padding: 0.5em;
+    max-width: 150px;
+
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+    }
+
+    &.raised,
+    &.raised:hover {
+        transform: translateY(-10px);
+    }
+
+    .header {
+        text-transform: capitalize;
+    }
+}
+
+.history-container {
+    position: absolute;
+    top: 0;
+    right: 2em;
+
+    .entry-content.content {
+        text-transform: capitalize;
+
+        @media screen and (max-width: 768px) {
+            display: none !important;
+        }
+    }
+}
+
+.vertically-centered {
+    height: 184px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
